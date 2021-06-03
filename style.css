@@ -322,7 +322,8 @@ footer p{
   .logo-box{
     grid-column: 1;
     grid-row: 1;
-    margin: 15px auto;
+    margin: auto;
+    width: 400px;
   }
   nav{
     grid-column: 1;
@@ -445,6 +446,33 @@ footer p{
     grid-column: 2;
     grid-row: 6;
   }
+  /*Bloque Footer en vista movil*/
+  footer{
+    grid-template-columns: 100%;
+    grid-template-rows: 20px 130px 20px;
+    padding: 0;
+  }
+  #org{
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0;
+    text-align: right;
+    padding: 5px 5px 0 5px;
+    font-size: 0.7em;
+  }
+  #message{
+    grid-column: 1;
+    grid-row: 1;
+    margin: 5px 0 0 0;
+    text-align: left;
+  }
+  footer a{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .logo-church{
+    width: 150px;
+  }
 }
 
 @media only screen and (min-width: 42.5em) {
@@ -453,5 +481,10 @@ footer p{
   }
 	.desk li {
     display: inline-block;
+  }
+  #org{
+    margin: 0;
+    padding: 0 5px 0 0;
+    font-size: 1em;
   }
 }

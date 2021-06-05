@@ -8,24 +8,6 @@ body {
   color: #444;
   background-color: #f1faee;
 }
-.desk li:first-child {
-  display: block;
-}
-
-.desk li{
-  display: none;
-}
-.desk {
-  display: block;
-  text-align: center;
-}
-.responsive li{
-  display: block;
-  margin-bottom: 0.4em;
-}
-.responsive{
-  margin: auto;
-}
 a {
   text-decoration: none;
 }
@@ -33,10 +15,7 @@ nav a{
   color: #b1264d;
   padding: 0.7em;
 }
-nav li:nth-of-type(3) a {
-  padding-left: 0;
-  padding-right: 0;
-}
+
 nav a:hover{
   color: #f1faee;
   background-color: hsl(343, 63%, 45%);
@@ -80,13 +59,13 @@ header {
 }
 nav {
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 28% 72%;
 }
 nav ul {
   grid-column: 2;
   list-style: none; /* removes the bullets! */
   display: grid;
-  grid-template-columns: 10% 45% 35% 10%;
+  grid-template-columns: 10% 35% 45% 10%;
   margin: 10px;
   padding-left: 0;
 }
@@ -194,12 +173,11 @@ main h2, .first p{
   display: grid;
   background-color: rgb(230, 225, 219);
   grid-template-columns: 40% 60%;
-  grid-template-rows: 30% 60%;
+  grid-template-rows: 30% 70%;
   border: 2px solid #91022B;
-  border-bottom:0 solid white;
-  margin: 5% auto auto;
-  width: 80%;
   padding-bottom: 3%;
+  margin: 2% auto;
+  width: 80%;
 }
 .third h2{
   grid-column: 1/3;
@@ -211,20 +189,19 @@ main h2, .first p{
   grid-column: 1;
   grid-row: 2;
   width: 40%;
-  margin-left: auto;
-  padding-right: 5%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  margin: auto 1em auto auto ;
+  width: 150px;
 }
 .info{
   grid-column: 2;
   grid-row: 2;
   display: grid;
+  font-size: .9em;
   grid-template-columns: 30px 80px 60%;
   grid-template-rows: 30% 30% 30%;
   margin: auto auto auto 10px;
   padding-left: 20px;
-  border-left:2px solid #91022B;
+  border-left:1px solid #91022B;
 }
 .info a{
   color: #444;
@@ -279,7 +256,7 @@ main h2, .first p{
 }
 footer{
   display: grid;
-  grid-template-columns: 5% 50% 25% 10%;
+  grid-template-columns: 1% 54% 25% 10%;
   background-color: #fcfcfc;
   color: #91022B;
   padding-top:15px;
@@ -311,11 +288,13 @@ footer p{
     grid-column: 3;
     grid-row: 1;
     margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     color: black;
     text-align: right;
 }
 #org{
-  margin: auto auto auto 0;
+  margin: auto 0;
 }
 @media only screen and (max-width: 800px ) {
   /*Codigo del Menu(Todas las clases que la implican)*/
@@ -351,7 +330,8 @@ footer p{
 /*Para el primer bloque vista de celular*/
   .first{
     grid-template-columns: 100%;
-    grid-template-rows: 20% 15% 50%;
+    grid-template-rows: 23% 17% 60%;
+    
   }
   .home-headline-1{
     grid-column: 1;
@@ -407,7 +387,7 @@ footer p{
     width: 50px;
   }
   .info{
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10% 80%;
     grid-template-rows: 10% 15% 10% 15% 10% 15%;
     grid-column: 1;
     grid-row: 3;
@@ -454,15 +434,14 @@ footer p{
   }
   /*Bloque Footer en vista movil*/
   footer{
-    grid-template-columns: 100%;
-    grid-template-rows: 30px 130px 20px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70% 30%;
     padding: 0;
   }
   #org{
     grid-column: 1;
-    grid-row: 3;
-    margin: 0;
-    text-align: right;
+    grid-row: 2;
+    margin-bottom: auto;
     padding: 5px 5px 0 5px;
     font-size: 0.7em;
   }
@@ -473,24 +452,30 @@ footer p{
     text-align: left;
   }
   footer a{
-    grid-column: 1;
-    grid-row: 2;
+    margin-top: 2%;
+    grid-column: 2;
+    grid-row: 1/4;
   }
   .logo-church{
     width: 150px;
   }
 }
 
-@media only screen and (min-width: 42.5em) {
-  .desk li:first-child {
-    display: none;
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  nav li:nth-of-type(3) a {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
   }
-	.desk li {
-    display: inline-block;
+  nav a:hover{
+    color: #b1264d;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  nav ul{
+    grid-template-columns: 12% 41% 32% 75px;
   }
   #org{
-    margin: 0;
-    padding: 0 5px 0 0;
-    font-size: 1em;
+    padding: 5px 5px 0 5px;
   }
 }

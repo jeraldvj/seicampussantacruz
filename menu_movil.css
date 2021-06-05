@@ -3,7 +3,7 @@
 @media only screen and (max-width: 800px ) {
 .button_container {
   position: absolute;
-  top: 4%;
+  top: 25px;
   right: 10%;
   height: 27px;
   width: 35px;
